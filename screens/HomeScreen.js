@@ -1,42 +1,30 @@
-import React from 'react';
-import {
-  ActivityIndicator,
-  AsyncStorage,
-  Button,
-  StatusBar,
-  StyleSheet,
-  View,
-} from 'react-native';
+import React from "react";
+import {StyleSheet, Text, View, ImageBackground, StatusBar} from "react-native";
+import BasicFlatList from '../components/BasicFlatList';
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome to the app!',
+    //title: "Welcome to the app!"
+    header:null
   };
 
   render() {
     return (
-      <View style={styles.container}>
-        <Button title="Show me more of the app" onPress={this._showMoreApp} />
-        <Button title="Actually, sign me out :)" onPress={this._signOutAsync} />
-      </View>
+      <ImageBackground
+        source={require("../assets/647ae07c9c87aaae8056091cf867201d.jpg")}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <StatusBar hidden={true} />
+        <BasicFlatList />
+      </ImageBackground>
     );
   }
-
-  _showMoreApp = () => {
-    this.props.navigation.navigate('Other');
-  };
-
-  _signOutAsync = async () => {
-    await AsyncStorage.clear();
-    this.props.navigation.navigate('Auth');
-  };
 }
 
-
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
-  
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});

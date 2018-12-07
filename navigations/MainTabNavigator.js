@@ -1,7 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import {createStackNavigator, createAppContainer,createBottomTabNavigator} from 'react-navigation';
-//import Ionicons from 'react-native-vector-icons';
 import HomeScreen from '../screens/HomeScreen';
 import OtherScreen from '../screens/OtherScreen';
 import TabBarIcon from '../components/TabBarIcon';
@@ -17,8 +16,8 @@ const HomeStack = createStackNavigator({
         focused={focused}
         name={
           Platform.OS === 'ios'
-            ? `ios-information-circle${focused ? '' : '-outline'}`
-            : 'md-information-circle'
+            ? `ios-paper-plane`
+            : 'md-paper-plane'
         }
       />
     ),
@@ -29,11 +28,11 @@ const HomeStack = createStackNavigator({
   });
   
   OtherStack.navigationOptions = {
-    tabBarLabel: 'Other',
+    tabBarLabel: 'Profile',
     tabBarIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
-        name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+        name={Platform.OS === 'ios' ? 'ios-contact' : 'md-contact'}
       />
     ),
   };

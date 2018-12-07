@@ -2,12 +2,18 @@ import { createStackNavigator, createSwitchNavigator, createAppContainer,  } fro
 import SignInScreen from '../screens/SigninScreen';
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
 import MainTabNavigator from './MainTabNavigator';
-
+import SplashScreen from '../screens/SplashScreen'
 const AuthStack = createStackNavigator(
     { 
         SignIn:{
             screen: SignInScreen,      
-        } 
+        },
+        Splash: {
+            screen: SplashScreen
+      }
+    },
+    {
+      initialRouteName: 'Splash',
     }
 );
 
