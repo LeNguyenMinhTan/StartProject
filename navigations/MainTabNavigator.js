@@ -10,7 +10,7 @@ const HomeStack = createStackNavigator({
   });
   
   HomeStack.navigationOptions = {
-    tabBarLabel: 'Home',
+    tabBarLabel: 'Đơn từ',
     tabBarIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}
@@ -28,7 +28,7 @@ const HomeStack = createStackNavigator({
   });
   
   OtherStack.navigationOptions = {
-    tabBarLabel: 'Profile',
+    tabBarLabel: 'Thông tin cá nhận',
     tabBarIcon: ({ focused }) => (
       <TabBarIcon
         focused={focused}

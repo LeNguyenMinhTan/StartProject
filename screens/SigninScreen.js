@@ -27,6 +27,7 @@ export default class SignInScreen extends React.Component {
           imageStyle={styles.image}
         >
           <View style={styles.detailsContainer}>
+              <Text style={styles.largeText}> Booking App</Text>
               <View style={styles.containerTextInput}>
                 <TextInput style={styles.textInput} placeholder={"Nhập mã hoặc tên tài khoản"}></TextInput>
               </View>
@@ -49,7 +50,7 @@ export default class SignInScreen extends React.Component {
                     //title="Sign in!" 
                     onPress={this._signInAsync}
                 >
-                    Sign In
+                    Đăng Nhập
                 </Button>
           </View>
         </ImageBackground>
@@ -81,6 +82,8 @@ const styles = StyleSheet.create({
     },
     largeText: {
       fontSize: 44,
+     // fontFamily: Platform.OS === 'ios' ? 'AvenirNext-Regular' : 'Roboto',
+      color:'white',
     },
     smallText: {
       fontSize: 18,

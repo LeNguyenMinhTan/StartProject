@@ -35,8 +35,8 @@ export default class OtherScreen extends React.Component {
         </View>
         <View style={styles.detailsSection}>
           <DetailListItem icon="mail" title="Email" subtitle={email} />
-          <DetailListItem icon="phone" title="Work" subtitle={phone} />
-          <DetailListItem icon="smartphone" title="Personal" subtitle={cell} />
+          <DetailListItem icon="phone" title="Công Ty" subtitle={phone} />
+          <DetailListItem icon="smartphone" title="Di Động" subtitle={cell} />
           <TouchableOpacity onPress={this._signOutAsync}>
             <DetailListItem icon='exit-to-app' title="Log out" subtitle="đăng xuất" ></DetailListItem>
           </TouchableOpacity>
